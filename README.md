@@ -30,11 +30,6 @@ A simple, responsive **Tip Splitter Application** built using **HTML, CSS, and J
 
 ---
 
-## 📷 Screenshots
-(Add screenshots here after taking them)
-
----
-
 ## 🚀 How to Use
 1. Enter the **bill amount**.
 2. Select a **tip percentage** or enter a custom tip.
