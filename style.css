@@ -1,0 +1,211 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #004d40;
+    font-size: 28px;
+}
+
+header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.theme-btn {
+    margin-top: 10px;
+    background-color: #e0f2f1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.tip-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Tip Buttons */
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tip-btn {
+    background-color: #e0f2f1;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #004d40;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tip-btn:hover {
+    background-color: #b2dfdb;
+}
+
+.tip-btn.active {
+    background-color: #004d40;
+    color: white;
+}
+
+/* Result Section */
+.result-section {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-section div {
+    margin-bottom: 15px;
+}
+
+.result-section p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #b2dfdb;
+}
+
+.result-section h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.reset {
+    background-color: #ff7043;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .tip-btn {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .tip-btn.active {
+    background-color: #00bfa5;
+}
+
+body.dark-mode .result-section {
+    background-color: #222;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .tip-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .result-section h2 {
+        font-size: 20px;
+    }
+}

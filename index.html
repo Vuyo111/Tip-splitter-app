@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Splitter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TipMate</h1>
+            <p>Calculate tip and split the bill easily</p>
+            <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        </header>
+
+        <section class="input-section">
+            <label for="bill">Bill Amount (R)</label>
+            <input type="number" id="bill" placeholder="0.00">
+        </section>
+
+        <!-- Tip Selection Section -->
+        <section class="tip-section">
+            <p>Select Tip %</p>
+            <div class="tip-buttons">
+                <button class="tip-btn">5%</button>
+                <button class="tip-btn">10%</button>
+                <button class="tip-btn">15%</button>
+                <button class="tip-btn">20%</button>
+                <input type="number" id="custom-tip" placeholder="Custom">
+            </div>
+        </section>
+
+        <!-- Number of People Section -->
+        <section class="people-section">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" placeholder="1">
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section">
+            <div>
+                <p>Tip per person:</p>
+                <h2 id="tip-amount">R0.00</h2>
+            </div>
+            <div>
+                <p>Total per person:</p>
+                <h2 id="total-amount">R0.00</h2>
+            </div>
+            <button id="reset-btn" class="reset">RESET</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
